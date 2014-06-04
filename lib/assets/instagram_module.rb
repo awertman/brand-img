@@ -26,7 +26,7 @@ module InstagramModule
 
     def extract_hashies hashie
       hashie.each do |post|
-        p DateTime.strptime(post.created_time,'%s')
+        # p DateTime.strptime(post.created_time,'%s')
         push_to_database( format_post( post ), format_tag( post.tags ) )  ##note## add if is unique method ##note##
       end
     end
@@ -48,6 +48,7 @@ module InstagramModule
     def push_to_database post, tags
       post = @brand.posts.new(post)
       if post.save
+        p post.created_time
         post.tags.create(tags)
       end
     end
