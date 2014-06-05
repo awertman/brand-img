@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'pages#index'
   resources :brands, only: [:show]
-  resources :posts, only: [:index]
+  resources :posts, only: [:show]
 
 end
