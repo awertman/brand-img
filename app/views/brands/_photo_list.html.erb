@@ -1,8 +1,28 @@
+<% @posts.map do |post,count| %>
+  <div class="grid_2 photobox">
 
-<%= @brand.name %>
+    <div class="img_holder"><img class="instagram_img" src="<%= post.image_link %>" ></div>
+    <div class="info_holder">
+      <div class="box_content grid_7"> <%= "Tag Matches:" %> </div> <div class="box_value grid_2"> <%= count[:count] %> </div>
+      <div class="box_content grid_7"> <%= "Match percentage:" %> </div> <div class="box_value grid_2"> <%= (count[:count]*100)/post.tags.length %> %</div>
+      <!-- <div> <%= "Date: #{post.created_time}" %> </div> -->
+      <!-- <div> <%= "username: #{post.username}.  " %> </div> -->
+      <div class="tag_hover grid_9"> ^ Tags  </div>
+      <div class="tag_holder grid_10">
+        <p>
+        <% post.tags.each do |tag| %>
+            <div>
+            <%= tag.description  %>
+            </div>
+        <% end %>
+        </p>
+      </div>
 
-<ul>
-<% @brand.posts.each do |post| %>
-  <li><%= post.username %></li>
+
+    </div>
+
+  </div>
+
 <% end %>
-</ul>
+
+

@@ -35,7 +35,7 @@ module InstagramModule
       { platform_id: post.id,
         created_time: DateTime.strptime(post.created_time,'%s'),
         username: post.user.username,
-        image_link: post.images.standard_resolution.url,
+        image_link: post.images.low_resolution.url,
         likes: post.likes.count,
         latitude: post.location == nil ? nil : post.location.latitude ,
         longitude: post.location == nil ? nil : post.location.longitude }
