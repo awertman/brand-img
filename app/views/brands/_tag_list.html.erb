@@ -1,5 +1,5 @@
 <% @tag_options.each do |tag,count| %>
     <button id="<%= tag %>" class="primary_tags" > <%= "#{tag}:"%> <br><%= count %></button>
-    <%= button_to tag, show_post_path, :remote => true, :class => 'primary_tags', :id => tag  %>
+    <%= button_to tag, posts_path, :remote => true, :class => 'primary_tags', :id => tag  %>
 <% end %>
 
