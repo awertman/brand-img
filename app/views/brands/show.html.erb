@@ -1,7 +1,43 @@
-<%= @brand.name %>
+<nav>
+  <ul>
+    <li> <a href="/"> <h2>Brand<span>.img </span></h2> </a> </li>
+    <li> <a id="chart_view" href="">Charts </a> </li>
+    <li> <a id="photo_view" href="">Photos </a> </li>
+    <li> <a href="">Contact </a> </li>
+  </ul>
 
-<ul>
-<% @brand.posts.each do |post| %>
-  <li><%= post.username %></li>
-<% end %>
-</ul>
+  <!-- <ul id="how_to">
+    <h3>How does it work?</h3>
+    <li>Click on the "Matched Tags" buttons to filter results by a tag</li>
+    <li>Unfilter by clicking the tag in the "Applied Filters" section</li>
+    <li>Hover over images to enlarge</li>
+    <li>Hover over "^Tags" in photo box to see all matched tags (matched tags are colored green)</li>
+    <li>Click "Charts" or "Photos" in left hand pane to switch your view</li>
+  </ul> -->
+
+</nav>
+
+<div id="home">
+
+  <div class="grid_10">
+    <div class="grid_10"> Applied Filters </div>
+    <div id="filters" class="grid_10"><br></div>
+
+
+    <div class="grid_10"> Matched Tags </div>
+    <button id="toggle_filter" type="submit" class="btn">Hide Tags</button>
+
+    <div id="matched_tags" class="grid_10">
+      <%= render partial: "tag_list"  %>
+    </div>
+
+
+    <div class="grid_10 header_box"> Photos </div>
+    <div id="photo_layout" class="grid_10" ></div>
+      <hr>
+      <%= render partial: "photo_list" %>
+    <div id="chart_layout" class="grid_10 hide" ></div>
+
+</div>
+
+

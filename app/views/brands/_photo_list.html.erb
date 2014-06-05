@@ -1,0 +1,8 @@
+
+<%= @brand.name %>
+
+<ul>
+<% @brand.posts.each do |post| %>
+  <li><%= post.username %></li>
+<% end %>
+</ul>

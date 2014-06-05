@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140604040257) do
 
   create_table "tags", force: true do |t|
     t.integer "post_id"
+    t.integer "brand_id"
     t.string  "description"
   end
 
