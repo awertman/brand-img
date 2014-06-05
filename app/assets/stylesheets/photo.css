@@ -1,0 +1,70 @@
+.photobox {
+  height: 22em;
+}
+
+.instagram_img {
+  width:90%;    /*need to investigate this.. inheritance*/
+  /*border: 0.30em solid white;*/
+  margin: 2.5% 5%;
+  display: inline-block;
+  moz-box-shadow: 2px 5px 5px #000000;
+  -webkit-box-shadow: 2px 5px 5px #000000;
+  box-shadow: 2px 5px 5px #000000;
+}
+
+.info_holder {
+  color: white;
+  width: 90%;
+  margin: 0 5%;
+  padding: 1%;
+  font-size: 0.8em;
+}
+
+
+.box_content {
+  padding-left: 5%;
+  margin:0.4%;
+  background-color: #333333;
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+}
+
+.box_value {
+  background: darkgrey;
+  text-align: center;
+  padding-right: 2.5%;
+  border-top-right-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+.tag_hover {
+  padding-left: 5%;
+  padding-right: 2.5%;
+  height: 2em;
+  margin:0.4%;
+  background-color: #333333;
+  border-radius: 0.4em;
+}
+
+
+.tag_holder {
+  padding: 0 2%;
+  margin-top: 2%;
+  font-size: 1em;
+  text-align: center;
+  background-color: #333333;
+  border-radius: 0.4em;
+  display: none;
+}
+
+.instagram_img:hover {
+  -moz-transform:scale(1.3);
+  -webkit-transform:scale(1.3);
+  -o-transform:scale(1.3);
+}
+
+
+.tag_hover:hover~.tag_holder {
+  position:relative;
+  display: block;
+}
