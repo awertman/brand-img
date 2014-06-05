@@ -68,3 +68,9 @@
   position:relative;
   display: block;
 }
+
+span {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2em;
+}
