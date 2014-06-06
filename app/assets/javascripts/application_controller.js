@@ -9,12 +9,12 @@ renderAppliedFilters = function() {
   console.log(event.target.id)
 }
 
-updatePhotos = function() {
+updatePhotos = function(event, data) {
   console.log("ajax response")
-  console.log(arguments)
+  console.log(data)
 }
 
-errorRendering = function() {
+errorRendering = function(event, data) {
   console.log("error")
   console.log(arguments)
 }
