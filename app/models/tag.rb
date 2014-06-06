@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  belongs_to :post, counter_cache: true
+  belongs_to :post
 
   def self.get_tags_by filtered_tags, limit=20
     filtered_posts = Post.joins(:tags).where(tags: {description: filtered_tags}).select(:post_id).group(:post_id).having("count(tags) = ?", filtered_tags.length)

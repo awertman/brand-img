@@ -1,8 +1,9 @@
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() { /// this needs to be loaded on page load instea
+  console.log("content loaded")
   $("#matched_tags").on('click', renderAppliedFilters)
   $('#matched_tags').on('ajax:success', updatePhotos)
   $('#matched_tags').on('ajax:error', errorRendering)
-}
+})
 
 renderAppliedFilters = function() {
   console.log("applying filters")
