@@ -11,7 +11,9 @@ renderAppliedFilters = function() {
 
 updatePhotos = function(event, data) {
   console.log("ajax response")
-  console.log(data)
+  console.log(data["html"])
+  $('#matched_tags').html(data["tags"])
+  $('#photo_layout').html(data["photos"])
 }
 
 errorRendering = function(event, data) {
