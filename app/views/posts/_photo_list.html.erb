@@ -3,6 +3,8 @@
 
     <div class="img_holder"><img class="instagram_img" src="<%= post.image_link %>" ></div>
     <div class="info_holder">
+      <% p post %>
+      <% p count %>
       <div class="box_content grid_7"> <%= "Tag Matches:" %> </div> <div class="box_value grid_2"> <%= count %> </div>
       <div class="box_content grid_7"> <%= "Match percentage:" %> </div> <div class="box_value grid_2"> <%= (count*100)/post.tags.length %> %</div>
       <!-- <div> <%= "Date: #{post.created_time}" %> </div> -->

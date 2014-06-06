@@ -6,13 +6,15 @@ document.addEventListener("DOMContentLoaded", function() { /// this needs to be 
 })
 
 renderAppliedFilters = function() {
-  console.log("applying filters")
-  console.log(event.target.id)
+  if (event.target.className === "primary_tags grid_2" ) {
+      clonedButton = $("#"+ event.target.id).clone()
+      clonedButton.className = "primary_filters grid_2"
+      $("#filters").append(clonedButton)
+    }
 }
 
 updatePhotos = function(event, data) {
   console.log("ajax response")
-  console.log(data["html"])
   $('#matched_tags').html(data["tags"])
   $('#photo_layout').html(data["photos"])
 }
