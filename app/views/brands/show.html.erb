@@ -1,3 +1,7 @@
+<script>
+  initializeMainController()
+</script>
+
 <nav>
   <ul>
     <li> <a href="/"> <h2>Brand<span>.img </span></h2> </a> </li>
@@ -36,9 +40,11 @@
 
 
     <div class="grid_10 header_box"> Photos </div>
-      <hr>
-    <div id="photo_layout" class="grid_10" ></div>
-      <%#= render partial: "photo_list" %>
+    <hr>
+    <div id="photo_layout" class="grid_10" >
+      <%= render partial: "photo_list" %>
+    </div>
+
     <div id="chart_layout" class="grid_10 hide" ></div>
 
 </div>

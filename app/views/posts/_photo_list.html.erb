@@ -11,7 +11,7 @@
       <div class="tag_holder grid_10">
         <p>
         <% post.tags.each do |tag| %>
-          <% if @tag_options.any? { |key,value| key == tag.description } %>
+          <% if @counted_tags.any? { |key,value| key == tag.description } %>
             <span><%= tag.description  %></span>
           <% else %>
             <%= tag.description  %>

@@ -1,0 +1,3 @@
+initializeMainController = function() {
+  new MainController()
+}

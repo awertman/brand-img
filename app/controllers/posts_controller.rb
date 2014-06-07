@@ -1,20 +1,16 @@
 class PostsController < ApplicationController
+  include ApplicationHelper
 
   def show
-    p "-------- posts controller -------"
-    filters = session[:filters].push(params[:id])
-    filters = session[:filters] if session[:filters].uniq!
-    brand = Brand.find_by(id: session[:brand])
+    add_filter
+    get_filtered_tags_and_photos
+    render_tags_photos_and_filters
+  end
 
-    @tag_options = Tag.get_tags_by(brand, filters, 20) ########## does this take into account brand?
-    @posts = Post.get_posts_and_sort_by_tag_matches( brand, filters, @tag_options ).first(30)
-
-    @tag_options.reject! do |tag,count|
-      tag == brand.name || filters.any? { |filter| filter==tag }
-    end
-    @tag_options = @tag_options.first(20)
-
-    render :json => {:tags => (render_to_string 'posts/_tag_list', layout: false), :photos => (render_to_string 'posts/_photo_list', layout: false)}
+  def edit
+    remove_filter
+    @filters.length > 0 ? get_filtered_tags_and_photos : get_base_tags_and_photos
+    render_tags_photos_and_filters
   end
 
 end

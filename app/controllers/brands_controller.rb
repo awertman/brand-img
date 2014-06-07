@@ -1,14 +1,14 @@
 class BrandsController < ApplicationController
+  include ApplicationHelper
 
   def show
     # if user signed in, else show id 1
     @brand = Brand.find_by(id: params[:id])
     session[:brand] = params[:id]
     session[:filters] = []
+    @filters = session[:filters]
 
-    @tag_options = Brand.get_filtered_tags_by( @brand, 20 )
-    @posts = Brand.get_and_sort_by_tag_matches( @brand, @tag_options ).first(20)
-
+    get_base_tags_and_photos
   end
 
 end
