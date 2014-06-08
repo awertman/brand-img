@@ -15,8 +15,8 @@
  *= require grid
  *= require photo
  *= require tag
- *= require styles
  *= require media_queries
+ *= require styles
 
  *= require_tree
  */

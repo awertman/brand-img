@@ -1,5 +1,6 @@
 initializeMainController = function() {
   var filterController = new FilterController()
   var tagController = new TagController()
-  new MainController(filterController,tagController).bindListeners()
+  var toggleController = new ToggleController()
+  new MainController(filterController,tagController, toggleController).initialize()
 }
