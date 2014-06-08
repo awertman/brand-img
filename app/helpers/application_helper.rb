@@ -14,6 +14,8 @@ module ApplicationHelper
 
   def get_base_tags_and_photos
     @counted_tags = Tag.get_tags_by(@brand, @filters, 20)
+    p "-------------------------------- counted tags"
+    p @counted_tags
     @tag_options = Brand.get_filtered_tags_by( @brand, 20 )
     @posts = Brand.get_and_sort_by_tag_matches( @brand, @tag_options ).first(20)
   end
@@ -25,7 +27,7 @@ module ApplicationHelper
   end
 
   def render_tags_photos_and_filters
-    render :json => { :tags => (render_to_string 'posts/_tag_list', layout: false),
+    render :json => { :tags => (render_to_string 'brands/_tag_list', layout: false),
                       :photos => (render_to_string 'posts/_photo_list', layout: false),
                       :filters => (render_to_string 'posts/_filter_list', layout: false)}
   end

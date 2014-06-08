@@ -1,4 +1,4 @@
 <% @tag_options.each do |tag,count| %>
-    <%= button_to "#{tag}, #{count}", post_path(tag), method: :get, :remote => true, :class => 'primary_tags grid_2', :id => tag  %>
+    <%= button_to "#{tag}\n#{count}", post_path(tag), method: :get, :remote => true, :class => 'primary_tags grid_1', :id => tag  %>
 <% end %>
 

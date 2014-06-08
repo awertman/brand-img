@@ -1,0 +1,26 @@
+* {
+  font-size: 12px;
+}
+
+nav {
+  position: fixed;
+  height: 30px;
+  background-color: lightgrey;
+}
+
+nav h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+nav ul li {
+  list-style-type: none;
+  float: left;
+  margin: 0 2%;
+}
+
+#home {
+  margin: 0 2%;
+  margin-top: 40px;
+}
