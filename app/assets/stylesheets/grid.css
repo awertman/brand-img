@@ -5,8 +5,8 @@
  Gutter : 20px
 
  */
-.grid_1 { width: 10%; }
-.grid_2 { width: 19%; }
+.grid_1 { width: 9%; }
+.grid_2 { width: 20%; }
 .grid_3 { width: 30%; }
 .grid_4 { width: 40%; }
 .grid_5 { width: 50%; }
@@ -27,7 +27,7 @@
 .grid_8,
 .grid_9,
 .grid_10 {
-  margin: 0 0.5% 0 0.5%;
+  margin: 0px;
   float: left;
   display: block;
 }

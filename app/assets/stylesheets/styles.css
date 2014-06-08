@@ -24,3 +24,23 @@ nav ul li {
   margin: 0 2%;
   margin-top: 40px;
 }
+
+.headerbox {
+  text-align: center;
+  vertical-align: center;
+  margin: 4px 0;
+  padding: 8px 0;
+  background-color: #333333;
+  color: white;
+  border-radius: 0.4em;
+  font-size: 1.2em;
+}
+
+#filters {
+  min-height: 35px;
+}
+
+#toggle_filter {
+  float:left;
+  margin-left: 10px;
+}

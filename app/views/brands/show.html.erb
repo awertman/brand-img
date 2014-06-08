@@ -22,22 +22,25 @@
 <div id="home">
 
   <div class="grid_10">
-    <%= @brand.name %>
-    <%= @brand.posts.length %>
+    <div class="summary grid_10">
+      <div class="grid_5 summaryheader"> <%= @brand.name %> </div>
+      <div class="grid_5"> Total Posts: <%= @brand.posts.length %> </div>
+
+    </div>
     <br>
-    <div class="grid_10"> Applied Filters </div>
+    <div class="grid_10 headerbox"> Applied Filters </div>
     <div id="filters" class="grid_10"><br></div>
 
 
-    <div class="grid_10"> Matched Tags </div>
-    <button id="toggle_filter" type="submit" class="btn">Hide Tags</button>
+    <div class="grid_10 headerbox"><button id="toggle_filter" type="submit" class="btn">Hide Tags</button> Matched Tags </div>
+
 
     <div id="matched_tags" class="grid_10">
       <%= render partial: "tag_list"  %>
     </div>
 
 
-    <div class="grid_10 header_box"> Photos </div>
+    <div class="grid_10 headerbox"> Photos </div>
     <hr>
     <div id="photo_layout" class="grid_10" >
       <%= render partial: "photo_list" %>

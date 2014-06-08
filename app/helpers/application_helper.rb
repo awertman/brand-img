@@ -22,7 +22,7 @@ module ApplicationHelper
 
   def get_filtered_tags_and_photos
     @counted_tags = Tag.get_tags_by(@brand, @filters, 20)
-    @posts = Post.get_posts_and_sort_by_tag_matches( @brand, @filters, @counted_tags ).first(30)
+    @posts = Post.get_posts_and_sort_by_tag_matches( @brand, @filters, @counted_tags ).first(50)
     @tag_options = Tag.remove_filters_from_listing(@brand, @filters, @counted_tags, 20)
   end
 

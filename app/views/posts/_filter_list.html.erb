@@ -1,3 +1,7 @@
+<% if @counted_tags.length > 0 %>
+  <div class="grid_10 post_count"> Instagram Posts matching filtered tags: <%= @counted_tags.first[1] %> </div>
+<% end %>
+
 <% @filters.each do |tag| %>
     <%= button_to tag, edit_post_path(tag), method: :get, :remote => true, :class => 'primary_filters grid_1', :id => tag  %>
 <% end %>

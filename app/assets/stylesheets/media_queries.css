@@ -1,5 +1,67 @@
+@media (max-width: 1200px) {
+  .grid_2.photobox {
+    width: 25%;
+  }
+
+  .tag_holder {
+    width: 17%;
+    margin-top: 6%;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .grid_2.photobox {
+    width: 33.33%;
+  }
+
+  .tag_holder {
+    width: 24%;
+    margin-top: 7.5%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .grid_1 {
+    width: 19%;
+  }
+
+  .primary_tags, .primary_filters, #toggle_filter {
+    font-size: 11px;
+    height: 30px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+  .grid_2.photobox {
+    width: 50%;
+  }
+  .tag_holder {
+    width: 38%;
+    margin-top: 11%;
+  }
+
+}
+
+
 @media (max-width: 400px) {
 
+  .grid_2.photobox {
+    width: 100%;
+  }
+
+  .tag_holder {
+    width: 80%;
+    margin-top: 20%;
+  }
+
+  .primary_tags, .primary_filters, #toggle_filter {
+    font-size: 9px;
+    height: 28px;
+  }
 
 
 }
