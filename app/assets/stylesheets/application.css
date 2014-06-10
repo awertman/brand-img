@@ -2,8 +2,8 @@
 
  *
  *= require_self
- *= require 1_normalize
- *= require 2_grid
+ *= require normalize
+ *= require grid
  *= require photo
  *= require nav
  *= require styles
