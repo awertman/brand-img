@@ -2,6 +2,12 @@
 
  *
  *= require_self
+ *= require 1_normalize
+ *= require 2_grid
+ *= require photo
+ *= require nav
+ *= require styles
+ *= require media_queries
  *= require_tree
  */
 
