@@ -9,7 +9,7 @@ class BrandsController < ApplicationController
     session[:filters] = []
     @filters = session[:filters]
 
-    get_base_tags_and_photos
+    query_base_tags_and_photos
   end
 
 end

@@ -21,11 +21,12 @@
 <div id="show-brand">
 
   <div class="grid_10">
-    <div class="summary grid_10">
-      <div class="grid_5 summaryheader"> <%= @brand.name %> </div>
-      <div class="grid_5"> Total Posts: <%= @brand.posts.length %> </div>
 
+    <div id="summary" class="grid_10">
+      <div class="grid_2 summaryheader"> Current Brand: <%= @brand.name %> </div>
+      <div class="grid_2"> Total Posts/photos: <%= @brand.posts.length %> </div>
     </div>
+
     <br>
     <div class="grid_10 headerbox"> <p>Applied Filters</p> </div>
     <div id="filters" class="grid_10"><br></div>

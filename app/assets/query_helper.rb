@@ -1,14 +1,14 @@
 module QueryHelper
 
-  def get_base_tags_and_photos
+  def query_base_tags_and_photos
     @counted_tags = Tag.get_tags_by(@brand, @filters, 20)
     @tag_options = Brand.get_filtered_tags_by( @brand, 20 )
-    @posts = Brand.get_and_sort_by_tag_matches( @brand, @tag_options ).first(50)
+    @posts = Brand.get_and_sort_by_tag_matches( @brand, @tag_options ).first(30)
   end
 
-  def get_filtered_tags_and_photos
+  def query_filtered_tags_and_photos
     @counted_tags = Tag.get_tags_by(@brand, @filters, 20)
-    @posts = Post.get_posts_and_sort_by_tag_matches( @brand, @filters, @counted_tags ).first(50)
+    @posts = Post.get_posts_and_sort_by_tag_matches( @brand, @filters, @counted_tags ).first(30)
     @tag_options = Tag.remove_filters_from_listing(@brand, @filters, @counted_tags, 20)
   end
 

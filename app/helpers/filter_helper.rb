@@ -1,6 +1,6 @@
 module FilterHelper
 
-def add_filter
+  def add_filter
     @filters = session[:filters].push(params[:id])
     @filters = session[:filters] if session[:filters].uniq!
     @brand = Brand.find_by(id: session[:brand])

@@ -4,13 +4,15 @@ class PostsController < ApplicationController
 
   def show
     add_filter
-    get_filtered_tags_and_photos
+    query_filtered_tags_and_photos
+
     render_tags_photos_and_filters
   end
 
   def edit
     remove_filter
-    @filters.length > 0 ? get_filtered_tags_and_photos : get_base_tags_and_photos
+    @filters.length > 0 ? query_filtered_tags_and_photos : query_base_tags_and_photos
+
     render_tags_photos_and_filters
   end
 
