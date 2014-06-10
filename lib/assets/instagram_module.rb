@@ -20,14 +20,12 @@ module InstagramModule
         extract_hashies(page)
         max_id = page.pagination.next_max_tag_id
         p "------ page #{counter+=1}-------"
-        # sleep(2)
       end
     end
 
     def extract_hashies hashie
       hashie.each do |post|
-        # p DateTime.strptime(post.created_time,'%s')
-        push_to_database( format_post( post ), format_tag( post.tags ) )  ##note## add if is unique method ##note##
+        push_to_database( format_post( post ), format_tag( post.tags ) )
       end
     end
 

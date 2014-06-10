@@ -7,7 +7,7 @@ namespace :instagram_request do
     include InstagramModule
     p "sending request..."
     request = InstagramModule::Request.new
-    request.get_recent_media_by_tag("lagunitas", 45)
+    request.get_recent_media_by_tag("lagunitas", 40)
   end
 
 end
