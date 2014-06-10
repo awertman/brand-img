@@ -18,7 +18,10 @@ FilterController.prototype = {
     $('#filters').html(data["filters"])
   },
   renderCalculating: function() {
-    document.querySelector(".post_count").innerText = "calculating..."
+    if (event.target.className === "primary_filters grid_1" ) {
+      document.querySelector(".post_count").innerText = "calculating..."
+    }
+
   }
 
 }
