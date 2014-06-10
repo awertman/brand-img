@@ -16,6 +16,7 @@
  *= require photo
  *= require tag
  *= require media_queries
+  *= require nav
  *= require styles
 
  *= require_tree

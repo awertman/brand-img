@@ -1,5 +1,6 @@
 class BrandsController < ApplicationController
-  include ApplicationHelper
+  include QueryHelper
+  include FilterHelper
 
   def show
     # if user signed in, else show id 1

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  include ApplicationHelper
+  include QueryHelper
+  include FilterHelper
 
   def show
     add_filter

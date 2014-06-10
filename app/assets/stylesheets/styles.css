@@ -2,28 +2,19 @@
   font-size: 12px;
 }
 
-nav {
-  z-index:1;
-  position: fixed;
-  height: 30px;
-  background-color: lightgrey;
+#intro {
+  width: 80%;
+  margin: 10%;
+  color: #333333;
 }
 
-nav h2 {
-  margin: 0px;
-  padding: 0px;
+.logo {
+  width: 100%
 }
 
-
-nav ul li {
-  list-style-type: none;
-  float: left;
+#show-brand {
   margin: 0 2%;
-}
-
-#home {
-  margin: 0 2%;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .headerbox {
