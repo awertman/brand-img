@@ -1,5 +1,10 @@
 class Tag < ActiveRecord::Base
   belongs_to :post
+  validates :content, :numericality => {:greater_than => 0}
+
+  def content
+    self.description.match(/porn|gasm/) ? 0 : 1
+  end
 
   def self.get_tags_by brand, filters, limit=20
     filtered_posts = Post.where(brand_id: brand.id).joins(:tags).where(tags: {description: filters}).select(:post_id).group(:post_id).having("count(tags) = ?", filters.length)
